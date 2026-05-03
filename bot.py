@@ -11,7 +11,7 @@ from telegram import Bot
 # CONFIGURAÇÕES — edite apenas esta seção
 # ============================================================
 
-TOKEN = TOKEN # Token do BotFather
+TOKEN = token01 # Token do BotFather
 CANAL = "@infoptahbr"             # Username do seu canal
 
 # Feeds RSS — notícias de tech
