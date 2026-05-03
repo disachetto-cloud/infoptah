@@ -17,8 +17,9 @@ CANAL = "@infoptahbr"             # Username do seu canal
 # Feeds RSS — notícias de tech
 FEEDS_NOTICIAS = [
     "https://canaltech.com.br/rss/",
-    "https://olhardigital.com.br/feed/",
+    "https://www.clubedohardware.com.br/rss/",
     "https://techtudo.globo.com/rss2.xml",
+    "https://feeds.folha.uol.com.br/tec/rss091.xml"
 ]
 
 # Feed RSS do seu blog
@@ -33,11 +34,11 @@ ATIVAR_BLOG     = True
 ATIVAR_OFERTAS  = False   # Mude para True quando quiser ativar as ofertas
 
 # Horários de postagem
-HORARIO_NOTICIAS_1 = "08:00"
-HORARIO_NOTICIAS_2 = "13:00"
+HORARIO_NOTICIAS_1 = "07:00"
+HORARIO_NOTICIAS_2 = "12:00"
 HORARIO_NOTICIAS_3 = "19:00"
-HORARIO_BLOG       = "09:00"
-HORARIO_OFERTAS    = "12:00"
+HORARIO_BLOG       = "08:30"
+HORARIO_OFERTAS    = "11:00"
 
 # ============================================================
 # CONTROLE DE POSTS JÁ ENVIADOS (evita repetição)
