@@ -11,8 +11,8 @@ from telegram import Bot
 # CONFIGURAÇÕES — edite apenas esta seção
 # ============================================================
 
-TOKEN = "token01" # Token do BotFather
-CANAL = "@infoptahbr"             # Username do seu canal
+TOKEN = os.environ.get("TELEGRAM_TOKEN")  # Defina a variável de ambiente na Railway
+CANAL = "@infoptahbr"                      # Username do seu canal
 
 # Feeds RSS — notícias de tech
 FEEDS_NOTICIAS = [
@@ -183,14 +183,18 @@ async def postar_ofertas():
 # ============================================================
 
 def rodar_async(coro):
-    asyncio.run(coro)
+    asyncio.run(coro())
 
 def iniciar_agendamentos():
-    schedule.every().day.at(HORARIO_NOTICIAS_1).do(rodar_async, postar_noticias())
-    schedule.every().day.at(HORARIO_NOTICIAS_2).do(rodar_async, postar_noticias())
-    schedule.every().day.at(HORARIO_NOTICIAS_3).do(rodar_async, postar_noticias())
-    schedule.every().day.at(HORARIO_BLOG).do(rodar_async, postar_blog())
-    schedule.every().day.at(HORARIO_OFERTAS).do(rodar_async, postar_ofertas())
+    if not TOKEN:
+        raise ValueError("TELEGRAM_TOKEN não definido! Adicione a variável de ambiente na Railway.")
+
+    # ✅ CORREÇÃO: sem parênteses nas funções — passa a referência, não o resultado
+    schedule.every().day.at(HORARIO_NOTICIAS_1).do(rodar_async, postar_noticias)
+    schedule.every().day.at(HORARIO_NOTICIAS_2).do(rodar_async, postar_noticias)
+    schedule.every().day.at(HORARIO_NOTICIAS_3).do(rodar_async, postar_noticias)
+    schedule.every().day.at(HORARIO_BLOG).do(rodar_async, postar_blog)
+    schedule.every().day.at(HORARIO_OFERTAS).do(rodar_async, postar_ofertas)
 
     print(f"[{datetime.now()}] Bot iniciado! Aguardando horários agendados...")
     print(f"  Notícias: {HORARIO_NOTICIAS_1}, {HORARIO_NOTICIAS_2}, {HORARIO_NOTICIAS_3}")
