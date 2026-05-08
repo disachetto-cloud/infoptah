@@ -34,11 +34,11 @@ ATIVAR_BLOG     = True
 ATIVAR_OFERTAS  = False   # Mude para True quando quiser ativar as ofertas
 
 # Horários de postagem
-HORARIO_NOTICIAS_1 = "07:00"
-HORARIO_NOTICIAS_2 = "12:00"
-HORARIO_NOTICIAS_3 = "19:00"
-HORARIO_BLOG       = "08:30"
-HORARIO_OFERTAS    = "11:00"
+HORARIO_NOTICIAS_1 = "10:30"  # entra 07:30 Brasil
+HORARIO_NOTICIAS_2 = "15:00"  # entra 12:00 Brasil
+HORARIO_NOTICIAS_3 = "22:00"  # entra 19:00 Brasil
+HORARIO_BLOG       = "12:30"  # entra 09:30 Brasil
+HORARIO_OFERTAS    = "14:00"  # entra 11:00 Brasil
 
 # ============================================================
 # CONTROLE DE POSTS JÁ ENVIADOS (evita repetição)
