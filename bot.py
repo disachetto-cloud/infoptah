@@ -31,7 +31,7 @@ ARQUIVO_OFERTAS = "ofertas.csv"
 # Ativar ou desativar módulos
 ATIVAR_NOTICIAS = True
 ATIVAR_BLOG     = True
-ATIVAR_OFERTAS  = False   # Mude para True quando quiser ativar as ofertas
+ATIVAR_OFERTAS  = True   # Mude para True quando quiser ativar as ofertas
 
 # Horários de postagem
 HORARIO_NOTICIAS_1 = "10:30"  # entra 07:30 Brasil
