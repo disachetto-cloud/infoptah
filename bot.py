@@ -20,6 +20,9 @@ FEEDS_NOTICIAS = [
     "https://www.clubedohardware.com.br/rss/",
     "https://techtudo.globo.com/rss2.xml",
     "https://feeds.folha.uol.com.br/tec/rss091.xml"
+    "https://www.estadao.com.br/arc/outboundfeeds/rss/category/link/"
+    "http://g1.globo.com/dynamo/tecnologia/rss2.xml"
+    "https://www.cnnbrasil.com.br/tecnologia/feed/"
 ]
 
 # Feed RSS do seu blog
